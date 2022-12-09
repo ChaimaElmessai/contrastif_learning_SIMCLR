@@ -1,0 +1,36 @@
+{
+  "batch_size": 32,
+  "data_format": "channels_first",
+  "callback_list": {
+    "CSVLogger": {
+      "append": true,
+      "filename": "",
+      "separator": ";"
+    },
+    "ModelCheckpoint": {
+      "filepath": "",
+      "save_best_only": true,
+      "verbose": 0
+    },
+    "ReduceLROnPlateau": {
+      "factor": 0.3,
+      "min_lr": 1e-05,
+      "monitor": "loss",
+      "patience": 3,
+      "verbose": 1
+    },
+    "TerminateOnNaN": {}
+  },
+  "data_path": "/tsi/data_education/IMA206/2021-2022/ContrastiveIMA206/imagenet_100.h5",
+  "epochs": 3,
+  "experiment_folder": "/tsi/data_education/IMA206/2021-2022/ContrastiveIMA206/experiment_comp",
+  "generator_seed": 0,
+  "optimizer_parameters": [
+    {
+      "model_name": "model",
+      "optimizer_name": "Adam",
+      "lr": 0.001
+    }
+  ],
+  "split_path": "/tsi/data_education/IMA206/2021-2022/ContrastiveIMA206/split_imagenet_test.json"
+}

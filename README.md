@@ -1,1 +1,2 @@
-# contrastif_learning_SIMCLR
+# IMA206-Contrastive
+
